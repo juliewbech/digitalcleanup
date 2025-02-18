@@ -10,13 +10,13 @@ import Link from '../components/Link.astro';
             <a href="#">
             </a>
         </div>
-        <nav id="desktopmenu" class="hidden lg:block">
-            <ul class="flex flex-row gap-8">
-                <li class=""><Link href="#" variant="secondary" size="large">Ryd op digitalt</Link></li>
-                <li class=""><Link href="#" variant="secondary" size="large">Oprydningsguide</Link></li>
-                <li class=""><Link href="#" variant="secondary" size="large">Vis din indsats</Link></li>    
-            </ul>
-        </nav>
+       <nav id="desktopmenu" class="hidden lg:block">
+  <ul class="flex flex-row gap-8">
+    <li><Link href="/ryd_op_digitalt">Ryd op digitalt</Link></li>
+    <li><Link href="/oprydningsguide">Oprydningsguide</Link></li>
+    <li><Link href="/vis_din_indsats">Vis din indsats</Link></li>
+  </ul>
+</nav>
         <button id="burgermenu" class="lg:hidden font-[Loved_by_the_King] text-2xl relative inline-block text-black after:block after:w-0 after:h-[2px] after:bg-red-800 after:transition-all after:duration-300 hover:after:w-full" x-on:click="showmenu = ! showmenu">Menu</button>
 </div>
 
