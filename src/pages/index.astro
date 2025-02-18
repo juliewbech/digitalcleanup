@@ -4,20 +4,43 @@ import tailwind from "../styles/tailwind.css";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
-
-
+import Scrolling from "../components/Scrolling.astro";
+import Indsats from "../components/Indsats.astro";
+import CardPunkt from "../components/CardPunkt.astro";
 ---
 
 <MainLayout title="CleanUp">
 <main>
 <section  class="pt-4 grid gap-8 md:grid-cols-2">
-<h1 class="font-Poppins">Hej</h1>
+    <section>
+        <div> 
+            <h1>sroll</h1>
+        </div>
+        <div>
+            <h2>Digital oprdysning dag 17.03.2025</h2>
+            <Button>Vis din indsats</Button>
+        </div>
+        <div>
+            <img src="/public/digitalskraldespand.svg" alt="skraldespand">
+        </div>
 
-<section></section>
-<section></section>
-<section></section>
-<Button>Hejdetteerknappen</Button>
- 
+    </section>
+</section>
+    <section>
+        <div>
+            <img src="/public/spørgsmålstegn.svg" alt="spørgsmålstegn">
+        </div>
+        <div>
+            <h2>Hvad er digitalt skrald</h2>
+            <p>Digital oprydnings dag er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. I sit femte år og organiseret af Let's Do It World, handler dagen om at skabe opmærksomhed om digital forurening og opfordre både personer og virksomheder til at decluttere og omstrukturere deres online tilstedeværelse</p>
+            <p>Er du klar til at gøre en forskel? </p>
+            <p>Det er tid til at slette, sortere og systematisere, så vi sammen kan efterlade et lettere og mere bæredygtigt digitalt aftryk!</p>
+        </div>
+    <section>
+
+<CardPunkt></CardPunkt>
+<Scrolling></Scrolling>
+<Indsats></Indsats>
+
 </main>
 </MainLayout>
