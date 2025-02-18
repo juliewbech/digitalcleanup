@@ -37,8 +37,45 @@ import CardPunkt from "../components/CardPunkt.astro";
             <p>Det er tid til at slette, sortere og systematisere, så vi sammen kan efterlade et lettere og mere bæredygtigt digitalt aftryk!</p>
         </div>
     <section>
+    
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 mt-32 justify-center  ">
+    <CardPunkt
+        imageSrc="/path/to/first-image.jpg" 
+        imageAlt="Billede af noget" 
+        title="Første kort" 
+        text="Dette er den første beskrivelse af kortet." 
+    />
+    <CardPunkt
+        imageSrc="/path/to/first-image.jpg" 
+        imageAlt="Billede af noget" 
+        title="Andet kort" 
+        text="Dette er den første beskrivelse af kortet." 
+    />
+    <CardPunkt
+        imageSrc="/path/to/first-image.jpg" 
+        imageAlt="Billede af noget" 
+        title="Tredje kort" 
+        text="Dette er den første beskrivelse af kortet." 
+    />
+</div>
 
-<CardPunkt></CardPunkt>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8  justify-center">
+    <CardPunkt
+        imageSrc="/path/to/first-image.jpg" 
+        imageAlt="Billede af noget" 
+        title="Fjerde kort" 
+        text="Dette er den første beskrivelse af kortet." 
+    />
+    <CardPunkt
+        imageSrc="/path/to/first-image.jpg" 
+        imageAlt="Billede af noget" 
+        title="Femte kort" 
+        text="Dette er den første beskrivelse af kortet." 
+    />
+</div>
+
+
+
 <Scrolling></Scrolling>
 <Indsats></Indsats>
 
