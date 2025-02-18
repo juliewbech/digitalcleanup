@@ -1,0 +1,39 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import tailwind from "../styles/tailwind.css";
+import Button from '../components/Button.astro';
+import CardTrin from '../components/CardTrin.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+import Indsats from "../components/Indsats.astro";
+---
+
+
+
+<MainLayout title="CleanUp">
+    <main>
+    <section  class="pt-4 grid gap-8 md:grid-cols-2">
+        <div>
+    <h1 class="font-Poppins">Ryd op digitalt</h1>
+    <h2>15.03.2025</h2>
+    <Button>Vis din indsats</Button>
+</div>
+<div>
+    <img src="/public/digitalskraldespand.svg" alt="skraldespand">
+</div>
+</section>
+    <section>
+        <h1>4 enkle trin for en grønnere digital fremtid</h1>
+        <div>
+            <CardTrin></CardTrin>
+            <CardTrin></CardTrin>
+        </div>
+        <Button>Læs mere</Button>
+    </section>
+    <section>
+        <Indsats></Indsats>
+    </section>     
+    </main>
+    </MainLayout>
+    
