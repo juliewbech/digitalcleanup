@@ -2,9 +2,9 @@
 const { imageSrc, imageAlt, title, text } = Astro.props;
 ---
 
-<div class="max-w-sm mx-auto p-6 border-1 border-green rounded-lg shadow-lg flex flex-col mb-10">
-    <div class="overflow-hidden rounded-lg border-b-1 border-green">
-        <img src={imageSrc} alt={imageAlt} class="w-full h-48 object-cover border-1 border-green rounded-lg" />
+<div class="max-w-sm mx-auto p-6 border-1 border-green rounded-lg shadow-lg flex flex-col mb-10 text-black">
+    <div class="overflow-hidden ">
+        <img src={imageSrc} alt={imageAlt} class=" w-full h-[190px] object-fit border-1 border-green rounded-lg" />
     </div>
 
     <div class="flex flex-col justify-between py-4 text-black flex-grow">
