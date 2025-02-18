@@ -1,5 +1,31 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
+import tailwind from "../styles/tailwind.css";
 ---
 
-<section class=" grid grid-cols-2 gap-4">
+<MainLayout >
+
+<footer class="bg-green-20" >
+    
+    <h3 class="justify-self-center mt-10 mb-10 " >Digital oprydningsdag i tal</h3>
+
+<section class=" grid grid-cols-4 gap-4 mb-10 ">
+    <div>
+        <img src="/public/deltagere.svg" alt="deltagere"> 
+        <p>1,1184,747</p>
+        <p>Deltagere</p>
+    </div>
+    <div>
+        <img src="/public/fuldskraldespand.svg" alt="skraldespand">   
+        <p>14,5m GB</p>
+        <p>Slettede data</p>
+    </div>
+    <div>
+        <img src="/public/gladjordklode.svg" alt="jordklode">
+        <p>3,625 tons</p>
+        <p>CO2-besparelse</p>
+    </div>
 </section>
+    <p class="justify-self-center mb-10 " >Det er tid til at slette, sortere og systematisere – så vi sammen kan efterlade et lettere og mere bæredygtigt digitalt aftryk!</p>
+</footer>
+</MainLayout>
