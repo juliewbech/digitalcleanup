@@ -1,0 +1,34 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import tailwind from "../styles/tailwind.css";
+import { Image } from 'astro:assets';
+import Indsats from "../components/Indsats.astro";
+import Link from '../components/Link.astro';
+
+---
+
+<MainLayout title="oprydsningsguide">
+<main>
+
+<section>
+    <div>
+        <img src="/public/digitalskraldespand.svg" alt="digitalskraldespand">
+    </div>
+    <div>
+        <h2>Oprydsningsguide</h2>
+        <h3>Inspiration & værktøjer til en grønnere digital fremtid</h3>
+       <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ol>
+    </div>
+</section>    
+
+    <Indsats></Indsats>
+</main>
+</MainLayout>
