@@ -1,19 +1,19 @@
 ---
 const { href = "#", target = "_self", variant = "primary", size = "medium" } = Astro.props;
 
-const linkStyling = "duration-1000 font-[Loved_by_the_King]";
+const linkStyling = "duration-1000 font-Poppins";
 
 const variantClasses = {
     "textlink": "underline text-blue-800",
-    "primary": "inline-block border-2 my-4 px-8 py-2 hover:text-white border-black hover:bg-black",
-    "secondary": "relative inline-block text-black after:block after:w-0 after:h-[2px] after:bg-red-800 after:transition-all after:duration-300 hover:after:w-full"
+    "primary": "inline-block text-black my-4 px-8 py-2 hover:text-orange-500  active:text-orange-500",
+    "secondary": "inline-block text-black my-4 px-8 py-2 "
 };
 
 const sizeClasses = {
     "standard": "hover:font-bold",
-    "large": "text-xl font-bold uppercase hover:-skew-x-20",
-    "medium": "text-lg hover:-skew-x-20",
-    "small": "text-md hover:-skew-x-20"
+    "large": "text-xl uppercase",
+    "medium": "text-lg",
+    "small": "text-md"
 };
 ---
 
