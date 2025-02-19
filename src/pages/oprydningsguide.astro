@@ -7,18 +7,18 @@ import Link from '../components/Link.astro';
 
 ---
 
-<MainLayout title="oprydsningsguide">
+<MainLayout title="Oprydningsguide">
 <main>
 
-<section>
+<section class="grid grid-cols-2 p-15">
     <div>
-        <img src="/public/digitalskraldespand.svg" alt="digitalskraldespand">
+        <img class="h-90" src="/public/digitalskraldespand.svg" alt="digitalskraldespand">
     </div>
-    <div>
-        <h2>Oprydsningsguide</h2>
-        <h3>Inspiration & værktøjer til en grønnere digital fremtid</h3>
+    <div >
+        <h2 class="text-black font-bold text-4xl">Oprydsningsguide</h2>
+        <h3 class="text-black font-light text-2xl pt-2">Inspiration & værktøjer til en grønnere digital fremtid</h3>
        
-        <ol class="underline text-orange" >
+        <ol class="underline text-orange pt-4" >
             <li><Link>1. Retningslinjer for enkeltpersoner</Link></li>
             <li><Link>2. Sådan rydder du op på din computer og Drive</Link></li>
             <li><Link>3. Sådan rydder du op i dine e-mails</Link></li>        
