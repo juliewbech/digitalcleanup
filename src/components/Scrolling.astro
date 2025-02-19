@@ -1,11 +1,27 @@
 ---
+const { variant = "primary", size = "medium" } = Astro.props;
+
+const scrollingStyling = "duration-1000 font-Poppins";
+
+const variantClasses = {
+    "primary": "text-orange uppercase",
+    "secondary": "text-black uppercase"
+};
+
+const sizeClasses = {
+    "standard": "hover:font-bold",
+    "large": "text-8xl px-8",
+    "medium": "text-lg",
+    "small": "text-md"
+};
 ---
 
 <div class="w-full py-4">
     <div class="flex animate-marquee">
       <div class="flex space-x-4 w-max">
-        <h1 class="text-orange-500 text-8xl px-8 uppercase">
-        </h1>
+          <h1 class:list={[scrollingStyling, variantClasses[variant], sizeClasses[size]]}>
+            <slot />
+          </h1>
       </div>
     </div>
   </div>
@@ -22,6 +38,5 @@
       animation: marquee 12s linear infinite;
     }
   </style>
-  
   
   
