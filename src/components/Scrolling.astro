@@ -1,2 +1,27 @@
 ---
 ---
+
+<div class="w-full py-4">
+    <div class="flex animate-marquee">
+      <div class="flex space-x-4 w-max">
+        <h1 class="text-orange-500 text-8xl px-8 uppercase">
+        </h1>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    @keyframes marquee {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+  
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 12s linear infinite;
+    }
+  </style>
+  
+  
+  
