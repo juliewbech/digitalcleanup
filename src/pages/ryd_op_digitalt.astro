@@ -23,13 +23,41 @@ import Indsats from "../components/Indsats.astro";
     <img src="/public/digitalskraldespand.svg" alt="skraldespand">
 </div>
 </section>
-    <section>
-        <h1>4 enkle trin for en grønnere digital fremtid</h1>
+    <section class="bg-green-20">
+        <h1 class="text-black font-bold text-3xl">4 enkle trin for en grønnere digital fremtid</h1>
         <div>
-            <CardTrin></CardTrin>
-            <CardTrin></CardTrin>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 mt-32 justify-center ">
+                <CardTrin
+                    imageSrc="/public/1.svg" 
+                    imageAlt="1" 
+                    title="Ryd op på din smartphone" 
+                    text="Slet apps, du ikke bruger – de bruger energi selv, når de er inaktive. Fjern gamle brugerprofiler og konti, du ikke længere bruger. Gennemgå dine billeder og videoer – slet dubletter og unødvendige filer." 
+                />
+                <CardTrin
+                    imageSrc="/public/2.svg" 
+                    imageAlt="2" 
+                    title="Organiser din computer" 
+                    text="Slet ubrugelige filer, dubletter og slørede billeder. Ryd op i gamle video- og dokumentfiler – arkivér kun det vigtige. Se vejledningen for en mere effektiv oprydning." 
+                />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 mt-32 justify-center ">
+                <CardTrin
+                    imageSrc="/public/3.svg" 
+                    imageAlt="3" 
+                    title="Rens din indbakke" 
+                    text="Sortér mails efter ældste dato og arkivér vigtige beskeder. Afmeld nyhedsbreve, du ikke læser. Slet gamle e-mailtråde – behold kun de nyeste svar." 
+                />
+                <CardTrin
+                    imageSrc="/public/4.svg" 
+                    imageAlt="4" 
+                    title="Skab nye digitale vaner" 
+                    text="Brug færre mails – undgå unødvendige ok og tak beskeder. Gem vigtige filer ét sted i skyen i stedet for at kopiere dem overalt. Begræns streaming, gaming og sociale medier for at reducere dit digitale aftryk." 
+                />
+            </div>
         </div>
-        <Button>Læs mere</Button>
+        <div class="flex flex-row items-center justify-end pt-6">
+            <Button>Læs mere</Button>
+        </div>
     </section>
     <section>
         <Indsats></Indsats>
