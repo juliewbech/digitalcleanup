@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import tailwind from "../styles/tailwind.css";
 import Button from '../components/Button.astro';
+import Scrolling from '../components/Scrolling.astro';
 import CardTrin from '../components/CardTrin.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
@@ -11,61 +12,49 @@ import Indsats from "../components/Indsats.astro";
 
 <MainLayout title="CleanUp">
     <main>
-    <section  class="pt-4 grid gap-8 md:grid-cols-2">
-<h1>Scrolling text</h1>
-<section>
+        <Scrolling variant="primary" size="large">VIS DIN INDSATS</Scrolling>
+    <section  class="pt-4 grid gap-8 md:grid-cols-2 border-green border-2 rounded-md mx-32 pb-4">
     <div>
-    <img src="/public/jordklode_stjerner.svg" alt="jordklode">
+    <img class="h-130 px-8" src="/public/jordklode_stjerner.svg" alt="jordklode">
     </div>
-<div>
-    <form method="post" class="border-red-800 border-2 p-8 font-[Loved_by_the_King] text-xl">
-        <div class="grid grid-cols-5">
-            <div>
-            <label for="antal" class="text-gray-900 pb-5">Levering</label><br>
-        </div>
-        <div>
-            <input type="number" id="antal" name="antal" class="mt-1 block w-full border-2 border-red-800 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"><br>
-        </div>
-    </div>
-    <div class="grid grid-cols-5">
-        <div>
-        <input type="radio" id="radio" name="radio" class="border-2 border-red-800 text-red-800 shadow-sm focus:border-red-800 focus:ring focus:ring-offset-0 focus:ring-red-800 focus:ring-opacity-50" checked="">PostDK<br>
-    </div>
-    <div>
-        <input type="radio" id="radio" name="radio" class="border-2 border-red-800 text-red-800 shadow-sm focus:border-red-800 focus:ring focus:ring-offset-0 focus:ring-red-800 focus:ring-opacity-50" checked="">Afhent<br>
-    </div>
-    </div>
+<div class="pb-4">
+    <form method="post" class="p-8 text-xl">
     <div class="pt-5">
-        <input type="text" id="fname" name="fname" class="mt-1 block w-full border-2 border-red-800 shadow-sm focus:border-black focus:ring focus:ring-black focus:ring-opacity-50" placeholder="Navn"><br>
+    <div>
+        <input type="text" id="fornavn" name="fornavn" class="mt-1 block w-full rounded-md bg-grey shadow-sm focus:border-orange focus:ring focus:ring-orange focus:ring-opacity-50" placeholder="Navn"><br>
+    </div>
     </div>
     <div>
-        <input type="text" id="address" name="address" class="mt-1 block w-full border-2  border-red-800 shadow-sm focus:border-black focus:ring focus:ring-black focus:ring-opacity-50" placeholder="Adresse"><br>
+        <input type="text" id="efternavn" name="efternavn" class="mt-1 block w-full rounded-md bg-grey shadow-sm focus:border-orange focus:ring focus:ring-orange focus:ring-opacity-50" placeholder="Efternavn"><br>
     </div>
     <div>
-        <input type="email" id="email" name="email" class="mt-1 block w-full border-2 border-red-800 shadow-sm focus:border-black focus:ring focus:ring-black focus:ring-opacity-50" placeholder="E-mail"><br>
-    </div>
-    <section class="grid grid-cols-2 gap-2">
-    <div>
-        <input type="text" id="postnummer" name="postnummer" class="mt-1 block w-full border-2 border-red-800 shadow-sm focus:border-black focus:ring focus:ring-black focus:ring-opacity-50" placeholder="Postnr."><br>
+        <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md bg-grey shadow-sm focus:border-orange focus:ring focus:ring-orange focus:ring-opacity-50" placeholder="E-mail"><br>
     </div>
     <div>
-        <input type="text" id="bynavn" name="bynavn" class="mt-1 block w-full border-2 border-red-800 shadow-sm focus:border-black focus:ring focus:ring-black focus:ring-opacity-50" placeholder="By"><br>
+        <input type="text" id="gb" name="gb" class="mt-1 block w-full rounded-md bg-grey shadow-sm focus:border-orange focus:ring focus:ring-orange focus:ring-opacity-50" placeholder="Slettet data i GB"><br>
     </div>
+    <div>
+        <input type="text" id="land" name="land" class="mt-1 block w-full rounded-md bg-grey shadow-sm focus:border-orange focus:ring focus:ring-orange focus:ring-opacity-50" placeholder="Land"><br>
+    </div>
+        <section class="flex flex-row">
+            <div>
+        <input type="checkbox" id="checkbox" name="checkbox" class="py-2 rounded-sm bg-grey shadow-sm focus:border-orange focus:ring focus:ring-orange focus:ring-opacity-50" checked=""><br>
+    </div>
+    <p class="text-base font-light">Jeg accepterer vilkår & betingelser</p>
 </section>
+<section class="flex flex-row">
     <div>
-        <input type="tel" id="tel" name="tel" class="mt-1 block w-full border-2 border-red-800 shadow-sm focus:border-black focus:ring focus:ring-black focus:ring-opacity-50" placeholder="Tlf.nr."><br>
+        <input type="checkbox" id="checkbox" name="checkbox" class=" font-light rounded-sm bg-grey shadow-sm focus:border-orange focus:ring focus:ring-orange focus:ring-opacity-50" checked=""><br>
     </div>
-    <div class="pb-4 grid grid-cols-2">
-        <div>
-        <input type="checkbox" id="checkbox" name="checkbox" class="border-2 border-red-800 text-red-800 shadow-sm focus:border-red-800 focus:ring focus:ring-offset-0 focus:ring-red-800 focus:ring-opacity-50" checked="">Jeg vil gerne tilmedles nyhedsmail<br>
+    <div>
+        <p class="text-base font-light">Ja tak, til at modtage nyhedsbreve</p>
     </div>
-        <div class="text-right">
-            <Button variant="primary" size="medium" class="ml-auto px-4 py-2">Fortsæt</Button>
-        </div>
-    </div>
+    </section>
+<div class="text-right">
+    <Button variant="primary" size="medium" class="ml-auto px-4 py-2">Fortsæt</Button>
+</div>
       </form>
 </div>
-</section>
     </section>     
     </main>
     </MainLayout>
