@@ -11,70 +11,81 @@ import CardPunkt from "../components/CardPunkt.astro";
 
 <MainLayout title="CleanUp">
 <main>
-<Scrolling variant="primary" size="large">Slet, sorter og systematisér dine digitale spor</Scrolling>
-       
-<section class="grid grid-cols-4 mb-10 mt-10 gap-50 mx-32">
-        <div class="col-span-2" >
-            <h2 class="font-bold text-4xl text-black leading-15" >Digital oprydsning dag </h2>
-            <h2 class="font-medium text-3xl text-black pb-5">17.03.2025</h2>
-            <Button>Vis din indsats</Button>
-        </div>
-        <div class="col-span-2" >
-            <img class="w-130"  src="/digitalskraldespand.svg" alt="skraldespand">
-        </div>
-</section>
-    <section class="grid grid-cols-3 mb-10 mx-32" >
-        <div class="col-span-1" >
-            <img class="w-70" src="/spørgsmålstegn.svg" alt="spørgsmålstegn">
-        </div>
-        <div class="col-span-2" >
-            <h2 class="font-bold text-3xl text-black leading-15" >Hvad er digitalt skrald?</h2>
-            <p class="font-light text-m text-black leading-8" >Digital oprydnings dag er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. I sit femte år og organiseret af Let's Do It World, handler dagen om at skabe opmærksomhed om digital forurening og opfordre både personer og virksomheder til at decluttere og omstrukturere deres online tilstedeværelse</p>
-            <p class="font-bold text-xl text-black leading-15" >Er du klar til at gøre en forskel? </p>
-            <p class="font-light text-m text-black leading-8" >Det er tid til at slette, sortere og systematisere, så vi sammen kan efterlade et lettere og mere bæredygtigt digitalt aftryk!</p>
-        </div>
-    </section>
+  <Scrolling variant="primary" size="large">Slet, sorter og systematisér dine digitale spor</Scrolling>
 
-<Scrolling variant="primary" size="large">Problemet med Digitalt skrald</Scrolling>
-
-<section class="bg-green-20 p-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8justify-center ">
-        <CardPunkt
-            imageSrc="/fabrik.svg" 
-            imageAlt="fabrik" 
-            title="Kæmpe energiforbrug" 
-            text="Bitcoin-mining bruger mere energi end hele New Zealand på et år! Dataforbrug kræver tre gange mere energi, end verdens solpaneler kan producere." 
-        />
-        <CardPunkt
-            imageSrc="/laptopco2.svg" 
-            imageAlt="laptop" 
-            title="Eksplosion i datamængder" 
-            text="I 2007 blev der skabt 1 zettabyte data – i 2035 vil vi nå over 2.000 zettabytes. 99% af al data er skabt inden for de sidste 10 år." 
-        />
-        <CardPunkt
-            imageSrc="/co2_wifi.svg" 
-            imageAlt="co2" 
-            title="Internet & CO2-udledning " 
-            text="Internettet udleder over 900 millioner tons CO2 årligt. 70 millioner servere lagrede data i 2022 – 20 millioner blev e-affald." 
-        />
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8  justify-center">
-        <CardPunkt
-            imageSrc="/skraldespand_spild.svg" 
-            imageAlt="tom skraldespand" 
-            title="Ubrugt data & spild" 
-            text="90% af al data bliver aldrig tilgået efter tre måneder. 91% af websider får ingen trafik fra Google." 
-        />
-        <CardPunkt
-            imageSrc="/email.svg" 
-            imageAlt="E-mails & CO2" 
-            title="E-mails & CO2" 
-            text="320 milliarder e-mails sendes dagligt – 62 billioner spam-mails årligt skaber 20 millioner tons CO2! Én e-mail udleder i gennemsnit 4 g CO2 – svarende til en tændt pære i 6 minutter." 
-        />
-    </div>
+  <!-- Digital oprydning sektion -->
+<section class="grid grid-cols-1 sm:grid-cols-4 mb-10 mt-10 gap-6 sm:gap-10 mx-4 sm:mx-32">
+  <div class="col-span-1 sm:col-span-2">
+    <h2 class="font-bold text-3xl sm:text-4xl text-black leading-tight">Digital oprydsning dag</h2>
+    <h2 class="font-medium text-2xl sm:text-3xl text-black pb-5">17.03.2025</h2>
+    <Link href="/vis_din_indsats">
+      <Button>Vis din indsats</Button>
+    </Link>
+  </div>
+  <div class="col-span-1 sm:col-span-2 sm:flex sm:justify-center">
+    <img class="w-full sm:w-130" src="/digitalskraldespand.svg" alt="skraldespand" />
+  </div>
 </section>
 
-<Indsats></Indsats>
 
+  <!-- Hvad er digitalt skrald sektion -->
+  <section class="grid grid-cols-1 sm:grid-cols-3 mb-10 mx-4 sm:mx-32">
+    <div class="col-span-1 sm:col-span-1 flex justify-center mb-4 sm:mb-0">
+      <img class="w-24 sm:w-70" src="/spørgsmålstegn.svg" alt="spørgsmålstegn" />
+    </div>
+    <div class="col-span-1 sm:col-span-2">
+      <h2 class="font-bold text-2xl sm:text-3xl text-black leading-tight">Hvad er digitalt skrald?</h2>
+      <p class="font-light text-base sm:text-lg text-black leading-relaxed">
+        Digital oprydnings dag er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. I sit femte år og organiseret af Let's Do It World, handler dagen om at skabe opmærksomhed om digital forurening og opfordre både personer og virksomheder til at decluttere og omstrukturere deres online tilstedeværelse.
+      </p>
+      <p class="font-bold text-xl sm:text-2xl text-black leading-tight mt-4">Er du klar til at gøre en forskel?</p>
+      <p class="font-light text-base sm:text-lg text-black leading-relaxed mt-2">
+        Det er tid til at slette, sortere og systematisere, så vi sammen kan efterlade et lettere og mere bæredygtigt digitalt aftryk!
+      </p>
+    </div>
+  </section>
+
+  <Scrolling variant="primary" size="large">Problemet med Digitalt skrald</Scrolling>
+
+  <!-- Card sektion -->
+  <section class="bg-green-20 p-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+      <CardPunkt
+        imageSrc="/fabrik.svg"
+        imageAlt="fabrik"
+        title="Kæmpe energiforbrug"
+        text="Bitcoin-mining bruger mere energi end hele New Zealand på et år! Dataforbrug kræver tre gange mere energi, end verdens solpaneler kan producere."
+      />
+      <CardPunkt
+        imageSrc="/laptopco2.svg"
+        imageAlt="laptop"
+        title="Eksplosion i datamængder"
+        text="I 2007 blev der skabt 1 zettabyte data – i 2035 vil vi nå over 2.000 zettabytes. 99% af al data er skabt inden for de sidste 10 år."
+      />
+      <CardPunkt
+        imageSrc="/co2_wifi.svg"
+        imageAlt="co2"
+        title="Internet & CO2-udledning"
+        text="Internettet udleder over 900 millioner tons CO2 årligt. 70 millioner servere lagrede data i 2022 – 20 millioner blev e-affald."
+      />
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center mt-8">
+      <CardPunkt
+        imageSrc="/skraldespand_spild.svg"
+        imageAlt="tom skraldespand"
+        title="Ubrugt data & spild"
+        text="90% af al data bliver aldrig tilgået efter tre måneder. 91% af websider får ingen trafik fra Google."
+      />
+      <CardPunkt
+        imageSrc="/email.svg"
+        imageAlt="E-mails & CO2"
+        title="E-mails & CO2"
+        text="320 milliarder e-mails sendes dagligt – 62 billioner spam-mails årligt skaber 20 millioner tons CO2! Én e-mail udleder i gennemsnit 4 g CO2 – svarende til en tændt pære i 6 minutter."
+      />
+    </div>
+  </section>
+
+  <!-- Indsats Sektion -->
+  <Indsats></Indsats>
 </main>
 </MainLayout>

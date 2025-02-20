@@ -1,0 +1,66 @@
+---
+const navItems = [
+  { href: "/", text: "Home" },
+  { href: "/oprydningsguide", text: "Oprydningsguide" },
+  { href: "/ryd_op_digitalt", text: "Ryd op digitalt" },
+  { href: "/vis_din_indsats", text: "Vis din indsats" },
+];
+---
+
+<nav class="bottom-nav">
+  <ul>
+    {navItems.map((item) => (
+      <li>
+        <a href={item.href} class="nav-item">{item.text}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8EB55A;
+    z-index: 1000;
+    display: block;
+  }
+
+  .bottom-nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolonner */
+    gap: 16px;
+    margin: 16px;
+    padding: 8px;
+    list-style: none;
+    height: 48px;
+  }
+
+  .bottom-nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom-nav .nav-item {
+    font-size: 12px;
+    font-weight: bold;
+    color: #F6F5F1;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .bottom-nav .nav-item:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  /* Skjul på større skærme */
+  @media (min-width: 768px) {
+    .bottom-nav {
+      display: none;
+    }
+  }
+</style>

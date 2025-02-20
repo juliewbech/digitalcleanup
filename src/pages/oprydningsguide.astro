@@ -6,30 +6,30 @@ import Indsats from "../components/Indsats.astro";
 import Link from '../components/Link.astro';
 
 ---
-
 <MainLayout title="Oprydningsguide">
-<main>
+  <main>
 
-<section class="grid grid-cols-2 p-15">
-    <div>
-        <img class="h-120" src="/digitalskraldespand.svg" alt="digitalskraldespand">
-    </div>
-    <div >
-        <h2 class="text-black font-bold text-4xl">Oprydsningsguide</h2>
-        <h3 class="text-black font-light text-2xl pt-2">Inspiration & værktøjer til en grønnere digital fremtid</h3>
-       
-        <ol class="underline text-orange pt-4" >
-            <li><Link>1. Retningslinjer for enkeltpersoner</Link></li>
-            <li><Link>2. Sådan rydder du op på din computer og Drive</Link></li>
-            <li><Link>3. Sådan rydder du op i dine e-mails</Link></li>        
-            <li><Link>4. Sådan rydder du op på din smartphone og tablet</Link></li>
-            <li><Link>5. Indsamling af deltagerdata 1</Link></li>
-            <li><Link>6. Indsamling af deltagerdata 2</Link></li>
-            <li><Link>7. Markedsføringsmateriale</Link></li>          
-        </ol>
-    </div>
-</section>    
+    <section class="grid grid-cols-1 sm:grid-cols-2 p-6 sm:p-15 gap-6 sm:gap-12">
+        <div class="flex justify-center">
+            <img class="h-60 sm:h-120" src="/digitalskraldespand.svg" alt="digitalskraldespand">
+        </div>
+        <div>
+            <h2 class="text-black font-bold text-3xl sm:text-4xl">Oprydsningsguide</h2>
+            <h3 class="text-black font-light text-xl sm:text-2xl pt-2">Inspiration & værktøjer til en grønnere digital fremtid</h3>
+
+            <ol class="underline text-orange pt-4 space-y-2">
+                <li><Link>1. Retningslinjer for enkeltpersoner</Link></li>
+                <li><Link>2. Sådan rydder du op på din computer og Drive</Link></li>
+                <li><Link>3. Sådan rydder du op i dine e-mails</Link></li>
+                <li><Link>4. Sådan rydder du op på din smartphone og tablet</Link></li>
+                <li><Link>5. Indsamling af deltagerdata 1</Link></li>
+                <li><Link>6. Indsamling af deltagerdata 2</Link></li>
+                <li><Link>7. Markedsføringsmateriale</Link></li>
+            </ol>
+        </div>
+    </section>
 
     <Indsats></Indsats>
-</main>
+
+  </main>
 </MainLayout>
